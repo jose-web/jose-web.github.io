@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(63, 94, 251, 1);
+    background: -moz-linear-gradient(-45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 82%, rgba(252, 70, 107, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(63, 94, 251, 1)), color-stop(82%, rgba(252, 70, 107, 1)), color-stop(100%, rgba(252, 70, 107, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 82%, rgba(252, 70, 107, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 82%, rgba(252, 70, 107, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 82%, rgba(252, 70, 107, 1) 100%);
+    background: linear-gradient(135deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 82%, rgba(252, 70, 107, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f5efb', endColorstr='#fc466b', GradientType=1);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.LI-badge-container-horizontal-light {
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1em;
+}
+
+h1 {
+    text-align: center;
+}
+
+#repositorios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.repositorio {
+    flex: 1 10%;
+    margin: 1em;
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: max-content;
+}
+
+.repositorio>p {
+    flex-basis: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.repositorio>a {
+    margin-top: auto;
+    flex: 1 40%;
+    background-color: rgba(0, 0, 255, 0.247);
+    text-align: center;
+    padding: 0.5em;
+    text-decoration: none;
+    margin: 0.5em;
+    border-radius: 0.5em;
+    color: blue;
+    transition: 0.5s;
+}
+
+.repositorio>a:hover {
+    background-color: rgba(0, 255, 64, 0.288);
+    color: green;
+}
