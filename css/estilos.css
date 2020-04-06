@@ -11,12 +11,6 @@ body {
     min-height: 100vh;
 }
 
-.LI-badge-container-horizontal-light {
-    width: 100% !important;
-    background: rgba(255, 255, 255, 0.5);
-    margin-bottom: 1em;
-}
-
 h1 {
     text-align: center;
     margin: 1em;
@@ -30,10 +24,24 @@ h1>a {
 
 #repositorios {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
     background-color: rgb(230, 230, 230);
     box-shadow: 0 0 1em rgb(177, 177, 177);
+}
+
+.grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloGrupo {
+    text-align: center;
+    font-size: 2em;
+}
+
+.grupoRepositorios {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .repositorio {
@@ -48,11 +56,12 @@ h1>a {
     border-left: 0.3em solid blue;
 }
 
-.repositorio>p {
+.repositorio>.nombreRepositorio {
     flex-basis: 100%;
     text-align: center;
     font-weight: bold;
     font-size: 1.3em;
+    white-space: initial;
 }
 
 .repositorio>a {
