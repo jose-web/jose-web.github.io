@@ -9,17 +9,36 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(102, 21, 168);
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 0.5em rgb(102, 21, 168);
+    color: white;
+}
+
+header>a>img {
+    width: 6vw;
+    height: 6vw;
+    margin: 0.5em;
+}
+
+header>a:hover {
+    background-color: rgb(69, 13, 114);
 }
 
 h1 {
-    text-align: center;
-    margin: 1em;
-    flex: 1 100%;
-}
-
-h1>a {
-    text-decoration: none;
-    color: black
+    font-size: 3vw;
+    margin-right: auto;
+    margin-left: 1em;
 }
 
 #repositorios {
@@ -36,7 +55,7 @@ h1>a {
 
 .tituloGrupo {
     text-align: center;
-    font-size: 2em;
+    font-size: 5vw;
 }
 
 .grupoRepositorios {
@@ -60,8 +79,12 @@ h1>a {
     flex-basis: 100%;
     text-align: center;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 3vw;
     white-space: initial;
+}
+
+.repositorio>a {
+    font-size: 2.5vw;
 }
 
 .repositorio>a {
@@ -83,11 +106,30 @@ h1>a {
 }
 
 @media (min-width:50em) {
-    body {
-        justify-content: center;
-        align-items: center;
+    header>a>img {
+        width: 3vw;
+        height: 3vw;
+    }
+    h1 {
+        font-size: 1.5vw;
     }
     #repositorios {
         width: 80%;
+    }
+    .tituloGrupo {
+        text-align: center;
+        font-size: 2.5vw;
+    }
+    .repositorio>.nombreRepositorio {
+        font-size: 1.5vw;
+    }
+    .repositorio>a {
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width:70em) {
+    .repositorio>a {
+        font-size: 1vw;
     }
 }
