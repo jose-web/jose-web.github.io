@@ -35,6 +35,28 @@ header>a:hover {
     background-color: rgb(69, 13, 114);
 }
 
+#cargando {
+    width: 10vw;
+    height: 10vw;
+    border: 1vw solid rgba(136, 136, 136, 0.1);
+    border-radius: 50%;
+    border-top: 1vw solid #3498db;
+    animation: gira 2s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+@keyframes gira {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 h1 {
     font-size: 3vw;
     margin-right: auto;
@@ -42,6 +64,7 @@ h1 {
 }
 
 #repositorios {
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: rgb(230, 230, 230);

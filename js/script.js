@@ -74,6 +74,7 @@ xhttp.onreadystatechange = function () {
 
             repositorios.appendChild(grupo);
         }
+        repositorios.removeChild(document.getElementById("cargando"));
     }
 };
 
@@ -107,10 +108,7 @@ function crearNodo(opciones) {
     if (typeof opciones.padre != "undefined")
         opciones.padre.appendChild(nodo);
 
-
     return nodo
-
-
 }
 
 function cambiaGuionPorEspacios(palabra) {
