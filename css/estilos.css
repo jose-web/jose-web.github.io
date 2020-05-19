@@ -96,6 +96,7 @@ header h1 {
     flex-wrap: wrap;
     margin: 1em;
     background-color: var(--color4);
+    height: min-content;
 }
 
 .repositorio h3 {
@@ -175,8 +176,15 @@ footer>a>img {
     .grupo {
         flex: 1 40%;
     }
-
     .repositorio {
-        flex:1 40%;
+        flex: 1 40%;
+    }
+    #repositorios {
+        width: 80%;
+        align-self: center;
+    }
+    .repositorio a {
+        margin: .5em;
+        white-space: nowrap;
     }
 }
