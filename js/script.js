@@ -1,114 +1,60 @@
-let xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-        let json = JSON.parse(this.responseText);
-
-        let arrayRepos = [];
-
-        for (let i = 0; i < json.length; i++) {
-            if (json[i].name != "jose-web.github.io") {
-                if (json[i].description != null) {
-                    let descripcion = json[i].description.split("|")
-                    let tags = descripcion[1].split("#")
-                    for (let o = 1; o < tags.length; o++) {
-                        let etiqueta = tags[o].trim();
-                        if (typeof arrayRepos[etiqueta] == "undefined")
-                            arrayRepos[etiqueta] = [];
-                        arrayRepos[etiqueta].push(json[i]);
-                    }
-                }
-                if (typeof arrayRepos[json[i].language] == "undefined")
-                    arrayRepos[json[i].language] = [];
-                arrayRepos[json[i].language].push(json[i]);
-            }
-        }
-
-        let repositorios = document.getElementById("repositorios");
-
-        for (const etiqueta in arrayRepos) {
-
-            let grupo = document.createElement("div");
-            grupo.className = "grupo";
-
-            let tituloGrupo = document.createElement("div");
-            tituloGrupo.className = "tituloGrupo";
-            tituloGrupo.innerHTML += etiqueta;
-            grupo.appendChild(tituloGrupo)
-
-            let grupoRepositorios = document.createElement("div");
-            grupoRepositorios.className = "grupoRepositorios";
-            grupo.appendChild(grupoRepositorios)
-
-            for (let i = 0; i < arrayRepos[etiqueta].length; i++) {
-                let repo = arrayRepos[etiqueta][i];
-
-                let repositorio = crearNodo({
-                    clase: "repositorio",
-                    padre: grupoRepositorios
-                });
-
-                crearNodo({
-                    clase: "nombreRepositorio",
-                    contenido: cambiaGuionPorEspacios(repo.name),
-                    padre: repositorio
-                });
-
-                crearNodo({
-                    tipo: "a",
-                    clase: "GitHub",
-                    href: repo.html_url,
-                    contenido: "GitHub",
-                    padre: repositorio
-                });
-
-                if (repo.has_pages) {
-                    crearNodo({
-                        tipo: "a",
-                        clase: "web",
-                        href: repo.name,
-                        contenido: "web",
-                        padre: repositorio
-                    });
-                }
-            }
-
-            repositorios.appendChild(grupo);
-        }
-        repositorios.removeChild(document.getElementById("cargando"));
-    }
-};
 
 window.onload = function () {
-    xhttp.open("GET", "https://api.github.com/users/jose-web/repos", true);
-    xhttp.send();
-}
 
-function crearNodo(opciones) {
-    let nodo;
+    fetch("https://api.github.com/users/jose-web/repos", {
+        method: 'GET',
+        headers: { "Accept": "application/vnd.github.mercy-preview+json" }
 
-    if (typeof opciones.tipo == "undefined")
-        nodo = document.createElement("div");
-    else
-        nodo = document.createElement(opciones.tipo);
+    }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(res => {
 
 
-    if (typeof opciones.clase != "undefined")
-        nodo.className = opciones.clase;
+            let arrayTopics = []
 
-    if (typeof opciones.href != "undefined")
-        nodo.href = opciones.href;
+            for (let i = 0; i < res.length; i++) {
+                if (res[i].name != "jose-web.github.io") {
+                    let topics = res[i].topics
+                    if (topics.length != 0) {
+                        for (let o = 0; o < topics.length; o++) {
+                            if (typeof arrayTopics[topics[o]] == "undefined")
+                                arrayTopics[topics[o]] = []
+                            arrayTopics[topics[o]].push(res[i])
+                        }
 
-    if (opciones.tipo == "a")
-        nodo.target = "_blank";
+                    }
 
-    if (typeof opciones.contenido != "undefined")
-        nodo.innerHTML = opciones.contenido;
+                }
+            }
+
+            let repositorios = ""
+
+            for (let indice in arrayTopics) {
 
 
-    if (typeof opciones.padre != "undefined")
-        opciones.padre.appendChild(nodo);
 
-    return nodo
+                repositorios += `<div class="grupo"><h2>${cambiaGuionPorEspacios(indice)}</h2>`
+
+                let dentroArray = arrayTopics[indice]
+
+                for (let i = 0; i < dentroArray.length; i++) {
+                    repositorios += `
+                    <div class="repositorio">
+                    <h3>${cambiaGuionPorEspacios(dentroArray[i].name)}</h3>
+                    <a href="${dentroArray[i].html_url}" target="_blank">VER EN GITHUB</a>
+                    ${dentroArray[i].has_pages?`<a href="${dentroArray[i].homepage}" target="_blank">VER EN WEB</a>`:''}
+                    </div>
+                    `
+                }
+                repositorios += `</div>`
+
+            }
+
+            this.console.log(arrayTopics)
+            this.document.getElementById("repositorios").innerHTML = repositorios
+
+        });
+
 }
 
 function cambiaGuionPorEspacios(palabra) {
