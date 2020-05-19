@@ -26,14 +26,39 @@ header {
     display: flex;
     align-items: center;
     box-shadow: 0 0 0.5em var(--color3);
-    padding:1em
+    padding: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header h1 {
     color: var(--color4);
     font-size: 2em;
-    flex:100%;
+    flex: 100%;
     text-align: center;
+}
+
+#buscar {
+    background-color: var(--color4);
+    display: flex;
+    justify-content: center;
+    border-radius: 2em;
+    flex: 80%;
+    margin-top: 1em;
+}
+
+#buscar input {
+    flex: 1;
+    border: none;
+    display: block;
+    padding-left: 1.5em;
+    background-color: transparent;
+}
+
+#buscar img {
+    width: 1em;
+    cursor: pointer;
+    margin: 1em
 }
 
 /*************** REPOSITORIOS /***************/
