@@ -86,7 +86,7 @@ header h1 {
     font-size: 2em;
 }
 
-.grupo .repositorio {
+.repositorio {
     flex: 100%;
     text-align: center;
     box-shadow: .2em .2em .2em var(--color2);
@@ -98,12 +98,12 @@ header h1 {
     background-color: var(--color4);
 }
 
-.grupo .repositorio h3 {
+.repositorio h3 {
     flex: 100%;
     margin-bottom: 1em;
 }
 
-.grupo .repositorio a {
+.repositorio a {
     flex: 1;
     text-decoration: none;
     border: solid .1em var(--color2);
@@ -116,7 +116,7 @@ header h1 {
     justify-content: center;
 }
 
-.grupo .repositorio a:hover {
+.repositorio a:hover {
     background-color: var(--color2);
     color: var(--color4);
 }
