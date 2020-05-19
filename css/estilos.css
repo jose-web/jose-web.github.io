@@ -161,3 +161,22 @@ footer>a>img {
         transform: rotate(360deg);
     }
 }
+
+@media (min-width:1000px) {
+    header h1 {
+        flex: initial;
+        font-size: 1.5em;
+    }
+    #buscar {
+        flex: 0 30%;
+        margin-left: auto;
+        margin-top: 0;
+    }
+    .grupo {
+        flex: 1 40%;
+    }
+
+    .repositorio {
+        flex:1 40%;
+    }
+}
