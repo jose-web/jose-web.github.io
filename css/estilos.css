@@ -33,7 +33,7 @@ header {
 
 header h1 {
     color: var(--color4);
-    font-size: 2em;
+    font-size: 5vw;
     flex: 100%;
     text-align: center;
 }
@@ -57,8 +57,9 @@ header h1 {
 
 #buscar img {
     width: 1em;
+    height: 1em;
     cursor: pointer;
-    margin: 1em
+    margin: 1em;
 }
 
 /*************** REPOSITORIOS /***************/
@@ -172,6 +173,9 @@ footer>a>img {
         flex: 0 30%;
         margin-left: auto;
         margin-top: 0;
+    }
+    #buscar img {
+        margin: .5em;
     }
     .grupo {
         flex: 1 40%;

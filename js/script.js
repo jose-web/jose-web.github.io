@@ -17,9 +17,10 @@ window.onload = function () {
                     let topics = res[i].topics
                     if (topics.length != 0) {
                         for (let o = 0; o < topics.length; o++) {
-                            if (typeof arrayRepositorios[topics[o]] == "undefined")
-                                arrayRepositorios[topics[o]] = []
-                            arrayRepositorios[topics[o]].push(res[i])
+                            let topic = topics[o].toUpperCase()
+                            if (typeof arrayRepositorios[topic] == "undefined")
+                                arrayRepositorios[topic] = []
+                            arrayRepositorios[topic].push(res[i])
                         }
                     }
                     arrayRepositoriosBusca.push(res[i])
@@ -63,13 +64,13 @@ function cambiaGuionPorEspacios(palabra) {
 function buscaRepositorio() {
     this.document.getElementById("repositorios").innerHTML = ""
 
-    let busqueda = document.getElementById("inputBusca").value.trim()
+    let busqueda = document.getElementById("inputBusca").value.trim().toUpperCase()
     if (busqueda == "") {
         mostrarRepositorios(arrayRepositorios)
     } else {
         let repositorios = ""
         for (let i = 0; i < arrayRepositoriosBusca.length; i++) {
-            if (cambiaGuionPorEspacios(arrayRepositoriosBusca[i].name).indexOf(busqueda) != -1)
+            if (cambiaGuionPorEspacios((arrayRepositoriosBusca[i].name).toUpperCase()).indexOf(busqueda) != -1)
                 repositorios += `
         <div class="repositorio">
         <h3>${cambiaGuionPorEspacios(arrayRepositoriosBusca[i].name)}</h3>
