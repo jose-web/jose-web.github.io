@@ -2,8 +2,6 @@ let arrayRepositorios = []
 let arrayRepositoriosBusca = []
 
 window.onload = function () {
-
-
     fetch("https://api.github.com/users/jose-web/repos", {
         method: 'GET',
         headers: { "Accept": "application/vnd.github.mercy-preview+json" }
@@ -29,7 +27,10 @@ window.onload = function () {
             this.document.getElementById("repositorios").innerHTML = ""
             mostrarRepositorios(arrayRepositorios)
 
-        });
+        })
+
+    if ("serviceWorker" in navigator)
+        navigator.serviceWorker.register("sw.js")
 }
 
 function mostrarRepositorios(arrayRepositorios) {
