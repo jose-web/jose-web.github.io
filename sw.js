@@ -7,12 +7,7 @@ self.addEventListener('install', function (evento) {
                 'index.html',
                 'sw.js',
                 'js/script.js',
-                'css/estilos.css',
-                'svg/codepen.svg',
-                'svg/iconoLupa.svg',
-                'svg/linkedin.svg',
-                'svg/openwebinars.svg',
-                'https://api.github.com/users/jose-web/repos'
+                'css/estilos.css'
             ])
         })
     )

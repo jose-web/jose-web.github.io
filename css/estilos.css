@@ -2,193 +2,143 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--color2)
+    color: var(--texto);
+    font-family: 'Varela Round', sans-serif;
 }
 
 :root {
-    --color1: #dbdbdb;
-    --color2: #1f1f1f;
-    --color3: #cacaca;
-    --color4: #ffffff;
+    --fondo: #2c2c2c;
+    --texto: #ffffff;
+    --hover: #535353;
+    --color1: #1f1f1f;
+    --color2: #ffffff10;
 }
 
 body {
-    background-color: var(--color1);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: var(--fondo);
+}
+
+.particles-js-canvas-el {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 header {
+    background-color: var(--color1);
+    padding: 0.5em;
     position: sticky;
     top: 0;
-    background-color: var(--color2);
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 0.5em var(--color3);
-    padding: 1em;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-header h1 {
-    color: var(--color4);
-    font-size: 5vw;
-    flex: 100%;
-    text-align: center;
-}
-
-#buscar {
-    background-color: var(--color4);
-    display: flex;
-    justify-content: center;
-    border-radius: 2em;
-    flex: 80%;
-    margin-top: 1em;
-}
-
-#buscar input {
-    flex: 1;
-    border: none;
-    display: block;
-    padding-left: 1.5em;
-    background-color: transparent;
-}
-
-#buscar img {
-    width: 1em;
-    height: 1em;
-    cursor: pointer;
-    margin: 1em;
-}
-
-/*************** REPOSITORIOS /***************/
-
-#repositorios {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.grupo {
-    flex: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1em;
-    padding: 1em;
-    justify-content: space-evenly;
-    border-radius: 1em;
-    background-color: var(--color3);
-}
-
-.grupo h2 {
-    flex: 100%;
-    text-align: center;
-    margin: 0.5em;
-    font-size: 2em;
-}
-
-.repositorio {
-    flex: 100%;
-    text-align: center;
-    box-shadow: .2em .2em .2em var(--color2);
-    border-radius: 1em;
-    padding: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1em;
-    background-color: var(--color4);
-    height: min-content;
-}
-
-.repositorio h3 {
-    flex: 100%;
-    margin-bottom: 1em;
-}
-
-.repositorio a {
-    flex: 1;
-    text-decoration: none;
-    border: solid .1em var(--color2);
-    border-radius: 1em;
-    margin: 0 1em;
+header>#iconosSociales a {
     padding: 0.5em;
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
+    width: 2em;
+    height: 2em;
+    display: inline-flex;
     justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: 0.5s;
+    text-decoration: none;
+    margin-right: 0.5em;
 }
 
-.repositorio a:hover {
-    background-color: var(--color2);
-    color: var(--color4);
+header>#iconosSociales a:hover {
+    background-color: var(--hover);
 }
 
-/*************** FOOTER /***************/
+section {
+    padding: 2em 3em;
+}
 
-footer {
-    margin-top: auto;
+#presentacion {
     background-color: var(--color2);
-    color: var(--color4);
-    padding: 1em;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
 }
 
-footer>a>img {
-    width: 3em;
-    height: auto;
+#presentacion img {
+    border-radius: 100%;
+    height: 10em;
+    width: auto;
 }
 
-/*************** CARGANDO /***************/
+#presentacion p {
+    margin-top: 0.5em;
+    text-align: justify;
+}
 
-#cargando {
-    width: 10vw;
-    height: 10vw;
-    border: 1vw solid rgba(136, 136, 136, 0.1);
-    border-radius: 50%;
-    border-top: 1vw solid #3498db;
-    animation: gira 2s linear infinite;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
+#presentacion>div {
+    margin-left: 0;
+}
+
+#recomendaciones {
+    display: flex;
+    flex-direction: column;
+}
+
+#recomendaciones>h2 {
+    align-self: center;
     margin-bottom: 1em;
+    text-align: center;
 }
 
-@keyframes gira {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+#recomendaciones>.recomendacion {
+    background-color: var(--texto);
+    color: var(--fondo);
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (min-width:1000px) {
-    header h1 {
-        flex: initial;
-        font-size: 1.5em;
+#recomendaciones>.recomendacion>span {
+    color: var(--color1);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#hazRecomendacion {
+    text-align: center;
+    text-decoration: none;
+    border: 0.1em solid var(--texto);
+    padding: 1em;
+    border-radius: 1em;
+    transition: 0.5s;
+}
+
+#hazRecomendacion:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+}
+
+@media (min-width:50em) {
+    section {
+        padding: 2em 7em;
     }
-    #buscar {
-        flex: 0 30%;
-        margin-left: auto;
-        margin-top: 0;
+    #presentacion {
+        flex-direction: row;
     }
-    #buscar img {
-        margin: .5em;
+    #presentacion>div {
+        margin-left: 2em;
     }
-    .grupo {
+    #recomendaciones {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #recomendaciones>h2 {
+        flex: 100%;
+    }
+    #recomendaciones>.recomendacion {
         flex: 1 40%;
+        margin: 1em;
     }
-    .repositorio {
-        flex: 1 40%;
-    }
-    #repositorios {
-        width: 80%;
-        align-self: center;
-    }
-    .repositorio a {
-        margin: .5em;
-        white-space: nowrap;
+    #hazRecomendacion {
+        flex: 100%;
+        margin-top: 1em;
     }
 }

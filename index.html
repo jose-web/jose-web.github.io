@@ -8,28 +8,74 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="img/logo.png">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>REPOSITORIOS DE JOSE DE LOS SANTOS RAMOS</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>JOSE DE LOS SANTOS RAMOS</title>
+    <!-- CDN Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <!-- CDN Fuente Varela Round -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <span id="particles-js"></span>
     <header>
-        <h1>JOSE DE LOS SANTOS RAMOS</h1>
-        <div id="buscar">
-            <input type="text" id="inputBusca" onkeyup="buscaRepositorio()">
-            <img src="svg/iconoLupa.svg" alt="Buscar">
+        <div id="iconosSociales">
+            <a href="https://www.linkedin.com/in/jose-web" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://es.stackoverflow.com/users/177187/jose-web" target="_blank"><i
+                    class="fab fa-stack-overflow"></i></a>
+            <a href="https://github.com/jose-web" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </header>
-    <div id="repositorios">
-        <div id="cargando"></div>
-    </div>
-    <footer>
-        <a href="https://linkedin.com/in/jose-web" target="_blank" title="Linkedin"><img src="svg/linkedin.svg"
-                alt="Linkedin"></a>
-        <a href="https://openwebinars.net/@jose" target="_blank" title="OpenWebinars"><img src="svg/openwebinars.svg"
-                alt="OpenWebinars"></a>
-        <a href="https://codepen.io/jose-web" target="_blank" title="CodePen"><img src="svg/codepen.svg"
-                alt="CodePen"></a>
-    </footer>
+    <section id="presentacion">
+        <img src="http://www.gravatar.com/avatar/9d08418b5f4ec35334131f12339e5e6d.jpg?s=256" alt="Foto de perfil" />
+        <div>
+            <H2>Hola, mi nombre es</H2>
+            <h1>JOSE DE LOS SANTOS RAMOS</h1>
+            <p>Y soy desarrollador de aplicaciones web, me considero una persona activa que le encanta el mundo de la
+                programación, adoro aprender nuevos lenguajes y siempre le pongo muchas ganas a lo que estoy
+                haciendo dando lo mejor de mi.</p>
+            <p>Me gusta hacer trabajos en grupo ya que puedo ayudar a los demás si tienen algún problema y también me
+                adapto si hay que hacerlo en solitario.</p>
+        </div>
+    </section>
+
+    <section id="recomendaciones">
+        <h2>RECOMENDACIONES EN LINKEDIN</h2>
+        <div class="recomendacion">
+            <span>JUAN MORENO, Profesor en DAW</span>
+            José de los santos es un trabajador disciplinado e incansable.
+            Es una persona perfeccionista que le gusta que sus proyectos tengan muy buena calidad.
+            Se adapta muy bien al trabajo colaborativo y sus compañeros suelen apreciarle por lo buena persona que es.
+            Recomiendo a cualquier empresa su contratación porque es un valor seguro.
+        </div>
+        <div class="recomendacion">
+            <span>FEDERICO HUÉRCANO RUIZ, Profesor en DAW</span>
+            He sido profesor de José de los Santos, y lo que puedo decir de él es que ha sido un excelente alumno, capaz
+            de enfrentarse a difíciles retos informáticos y encontrar la solución óptima. José es un valor seguro para
+            formar parte de un equipo de trabajo, porque añade a su valor técnico su valía como persona y compañero.
+        </div>
+        <div class="recomendacion">
+            <span>JOSÉ RODRÍGUEZ FERNANDEZ, Compañero en DAW</span>
+            Excelente compañero, resuelto y eficiente. Siempre dispuesto a ayudar, aprender y desarrollarse como
+            profesional.
+            Cursamos 2 años juntos en el Módulo Superior de Desarrollo de Aplicaciones Web en el IES Mar de
+            Alborán(Estepona) durante los cuáles demostró ser un gran compañero e incluso a veces un gran maestro.
+            Amplio conocimiento en HTML, CSS, PHP, JAVASCRIPT, JAVA, REACT, BOOTSTRAP, JQUERY, etc...
+
+            Sería un placer trabajar con él en el futuro! 👍👍
+        </div>
+        <div class="recomendacion">
+            <span>RAFAEL CARRILLO BONILLA, Compañero en DAW</span>
+            Es un buen compañero y ayuda a los demás a la hora de trabajar, es amable y simpático.
+        </div>
+        <a id="hazRecomendacion" href="https://www.linkedin.com/in/jose-web/recommendation/write" target="_blank">HAZME
+            UNA RECOMENDACIÓN</a>
+    </section>
+
+    <!-- CDN particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

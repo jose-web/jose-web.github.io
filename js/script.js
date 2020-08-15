@@ -1,96 +1,91 @@
-let arrayRepositorios = []
-let arrayRepositoriosBusca = []
-
-window.onload = function () {
-    fetch("https://api.github.com/users/jose-web/repos", {
-        method: 'GET',
-        headers: { "Accept": "application/vnd.github.mercy-preview+json" }
-
-    }).then(res => res.json())
-        .catch(error => console.error('Error:', error))
-        .then(res => {
-
-            for (let i = 0; i < res.length; i++) {
-                if (res[i].name != "jose-web.github.io") {
-                    let topics = res[i].topics
-                    if (topics.length != 0) {
-                        for (let o = 0; o < topics.length; o++) {
-                            let topic = topics[o].toUpperCase()
-                            if (typeof arrayRepositorios[topic] == "undefined")
-                                arrayRepositorios[topic] = []
-                            arrayRepositorios[topic].push(res[i])
-                        }
-                    }
-                    arrayRepositoriosBusca.push(res[i])
+particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 80,
+            "density":
+            {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "circle"
+        },
+        "opacity": {
+            "value": 1,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 0.2,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": false,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.05524295060491032,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": false,
+                "mode": "bubble"
+            }, "onclick": {
+                "enable": false,
+                "mode": "repulse"
+            },
+            "resize": true
+        }, "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
                 }
-            }
-            this.document.getElementById("repositorios").innerHTML = ""
-            mostrarRepositorios(arrayRepositorios)
-
-        })
-
-    if ("serviceWorker" in navigator)
-        navigator.serviceWorker.register("sw.js")
-}
-
-function mostrarRepositorios(arrayRepositorios) {
-    let repositorios = ""
-    for (let indice in arrayRepositorios) {
-        repositorios += `<div class="grupo"><h2>${cambiaGuionPorEspacios(indice)}</h2>`
-
-        let dentroArray = arrayRepositorios[indice]
-
-        for (let i = 0; i < dentroArray.length; i++) {
-            repositorios += `
-            <div class="repositorio">
-            <h3>${cambiaGuionPorEspacios(dentroArray[i].name)}</h3>
-            <a href="${dentroArray[i].html_url}" target="_blank">VER EN GITHUB</a>
-            ${dentroArray[i].has_pages ? `<a href="${dentroArray[i].homepage}" target="_blank">VER EN WEB</a>` : ''}
-            </div>
-            `
-        }
-        repositorios += `</div>`
-    }
-
-    this.document.getElementById("repositorios").innerHTML += repositorios
-}
-
-function cambiaGuionPorEspacios(palabra) {
-    while (palabra.includes("-")) {
-        palabra = palabra.replace("-", " ")
-    }
-    return palabra
-}
-
-function buscaRepositorio() {
-    this.document.getElementById("repositorios").innerHTML = ""
-
-    let busqueda = document.getElementById("inputBusca").value.trim().toUpperCase()
-    if (busqueda == "") {
-        mostrarRepositorios(arrayRepositorios)
-    } else {
-        let repositorios = ""
-        for (let i = 0; i < arrayRepositoriosBusca.length; i++) {
-            if (cambiaGuionPorEspacios((arrayRepositoriosBusca[i].name).toUpperCase()).indexOf(busqueda) != -1)
-                repositorios += `
-        <div class="repositorio">
-        <h3>${cambiaGuionPorEspacios(arrayRepositoriosBusca[i].name)}</h3>
-        <a href="${arrayRepositoriosBusca[i].html_url}" target="_blank">VER EN GITHUB</a>
-        ${arrayRepositoriosBusca[i].has_pages ? `<a href="${arrayRepositoriosBusca[i].homepage}" target="_blank">VER EN WEB</a>` : ''}
-        </div>
-        `
-        }
-
-        let buscaTopics = []
-
-        for (const indice in arrayRepositorios) {
-            if (cambiaGuionPorEspacios(indice).indexOf(busqueda) != -1) {
-                if (typeof buscaTopics[indice] == "undefined")
-                    buscaTopics[indice] = []
-                buscaTopics[indice] = arrayRepositorios[indice]
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            }, "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
             }
         }
-        this.document.getElementById("repositorios").innerHTML = repositorios
-        mostrarRepositorios(buscaTopics)
-    }
-}
+    },
+    "retina_detect": true
+});
