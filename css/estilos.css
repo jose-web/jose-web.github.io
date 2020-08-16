@@ -16,6 +16,8 @@
 
 body {
     background-color: var(--fondo);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .particles-js-canvas-el {
@@ -32,6 +34,7 @@ header {
     padding: 0.5em;
     position: sticky;
     top: 0;
+    flex: 100%;
 }
 
 header>#iconosSociales>a {
@@ -60,6 +63,7 @@ header>#iconosSociales>a>img {
 
 section {
     padding: 2em 3em;
+    flex: 100%;
 }
 
 section:nth-child(2n+1) {
@@ -91,7 +95,7 @@ section:nth-child(2n+1) {
 
 /************************/
 
-#educacion>div {
+.educaExperiencia>div {
     border-bottom: 0.1em solid var(--texto);
     padding: 1em 0;
 }
@@ -145,15 +149,24 @@ section:nth-child(2n+1) {
     section {
         padding: 2em 7em;
     }
+    /************************/
+
     #presentacion {
         flex-direction: row;
     }
     #presentacion>div {
         margin-left: 2em;
     }
+    /************************/
+    .educaExperiencia {
+        flex: 1 50%;
+        background-color: transparent !important;
+    }
+    /************************/
     #recomendaciones {
         flex-direction: row;
         flex-wrap: wrap;
+        background-color: var(--color2);
     }
     #recomendaciones>h2 {
         flex: 100%;
