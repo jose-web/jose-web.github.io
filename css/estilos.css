@@ -8,7 +8,7 @@
 
 :root {
     --fondo: #2c2c2c;
-    --texto: #ffffff;
+    --texto: #e4e4e4;
     --hover: #535353;
     --color1: #1f1f1f;
     --color2: #ffffff10;
@@ -35,6 +35,7 @@ header {
     position: sticky;
     top: 0;
     flex: 100%;
+    z-index: 100;
 }
 
 header>#iconosSociales>a {
@@ -96,8 +97,13 @@ section:nth-child(2n+1) {
 /************************/
 
 .educaExperiencia>div {
-    border-bottom: 0.1em solid var(--texto);
-    padding: 1em 0;
+    border-left: 0.2em solid var(--color2);
+    padding: 0.5em 1em;
+    margin: 2em 0.5em;
+}
+
+.educaExperiencia>div:hover {
+    border-color: var(--texto);
 }
 
 /************************/
@@ -121,6 +127,12 @@ section:nth-child(2n+1) {
     border-radius: 1em;
     display: flex;
     flex-direction: column;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+#recomendaciones>.recomendacion:hover {
+    opacity: 1;
 }
 
 #recomendaciones>.recomendacion>span {
@@ -150,7 +162,6 @@ section:nth-child(2n+1) {
         padding: 2em 7em;
     }
     /************************/
-
     #presentacion {
         flex-direction: row;
     }
