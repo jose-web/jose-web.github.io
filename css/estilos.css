@@ -111,6 +111,7 @@ section:nth-child(2n+1) {
 #recomendaciones {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
 }
 
 #recomendaciones>h2 {
@@ -119,26 +120,20 @@ section:nth-child(2n+1) {
     text-align: center;
 }
 
-#recomendaciones>.recomendacion {
+#recomendaciones .recomendacion {
     background-color: var(--texto);
     color: var(--fondo);
-    margin-bottom: 1em;
     padding: 1em;
     border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    opacity: 0.5;
-    transition: 0.5s;
+    transform: scale(0.9);
 }
 
-#recomendaciones>.recomendacion:hover {
-    opacity: 1;
-}
-
-#recomendaciones>.recomendacion>span {
+#recomendaciones .recomendacion>span {
     color: var(--color1);
     font-size: 1.5em;
     margin-bottom: 0.5em;
+    width: 100%;
+    display: block;
 }
 
 #hazRecomendacion {
@@ -201,6 +196,7 @@ section:nth-child(2n+1) {
     /************************/
     #presentacion {
         flex-direction: row;
+        background-color: var(--color2);
     }
     #presentacion>div {
         margin-left: 2em;
@@ -212,16 +208,7 @@ section:nth-child(2n+1) {
     }
     /************************/
     #recomendaciones {
-        flex-direction: row;
-        flex-wrap: wrap;
         background-color: var(--color2);
-    }
-    #recomendaciones>h2 {
-        flex: 100%;
-    }
-    #recomendaciones>.recomendacion {
-        flex: 1 40%;
-        margin: 1em;
     }
     #hazRecomendacion {
         flex: 100%;
