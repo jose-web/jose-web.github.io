@@ -2,225 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--texto);
+    color: var(--color2);
     font-family: 'Varela Round', sans-serif;
 }
 
 :root {
-    --fondo: #2c2c2c;
-    --texto: #e4e4e4;
-    --hover: #535353;
-    --color1: #1f1f1f;
-    --color2: #ffffff10;
+    --color1: #e4e4e4;
+    --color2: #2c2c2c;
+    --color3: rgb(241, 241, 241);
 }
 
 body {
-    background-color: var(--fondo);
+    background-image: linear-gradient(-40deg ,rgb(183, 0, 255), red);
     display: flex;
-    flex-wrap: wrap;
-}
-
-.particles-js-canvas-el {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-/************************/
-
-header {
-    background-color: var(--color1);
-    padding: 0.5em;
-    position: sticky;
-    top: 0;
-    flex: 100%;
-    z-index: 100;
-}
-
-header>#iconosSociales>a {
-    padding: 0.5em;
-    width: 2em;
-    height: 2em;
-    display: inline-flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    transition: 0.5s;
-    text-decoration: none;
-    margin-right: 0.5em;
 }
 
-header>#iconosSociales>a:hover {
-    background-color: var(--hover);
-}
-
-header>#iconosSociales>a>img {
-    width: 1.5em;
-    height: auto;
-}
-
-/************************/
-
-section {
-    padding: 2em 3em;
-    flex: 100%;
-}
-
-section:nth-child(2n+1) {
-    background-color: var(--color2);
-}
-
-/************************/
-
-#presentacion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#presentacion img {
-    border-radius: 100%;
-    height: 10em;
-    width: auto;
-}
-
-#presentacion p {
-    margin-top: 0.5em;
-    text-align: justify;
-}
-
-#presentacion>div {
-    margin-left: 0;
-}
-
-/************************/
-
-.educaExperiencia>div {
-    border-left: 0.2em solid var(--color2);
-    padding: 0.5em 1em;
-    margin: 2em 0.5em;
-}
-
-.educaExperiencia>div:hover {
-    border-color: var(--texto);
-}
-
-/************************/
-
-#recomendaciones {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-}
-
-#recomendaciones>h2 {
-    align-self: center;
-    margin-bottom: 1em;
-    text-align: center;
-}
-
-#recomendaciones .recomendacion {
-    background-color: var(--texto);
-    color: var(--fondo);
-    padding: 1em;
-    border-radius: 1em;
-    transform: scale(0.9);
-}
-
-#recomendaciones .recomendacion>span {
-    color: var(--color1);
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    width: 100%;
-    display: block;
-}
-
-#hazRecomendacion {
-    text-align: center;
-    text-decoration: none;
-    border: 0.1em solid var(--texto);
-    padding: 1em;
-    border-radius: 1em;
-    transition: 0.5s;
-}
-
-#hazRecomendacion:hover {
-    background-color: var(--texto);
-    color: var(--fondo);
-}
-
-/************************/
-
-#repositorios>h2 {
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-#repositorios>div {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color2);
-    margin-bottom: 1em;
-    align-items: center;
-    padding: 0.5em;
-    border-radius: 0.5em;
-}
-
-#repositorios>div>p {
-    padding: 0.5em;
-}
-
-#repositorios>div>p>a {
-    margin-left: 0.5em;
-}
-
-#repositorios>div>p>a:hover i {
-    color: var(--color1)
-}
-
-#repositorios>div>p>span {
-    display: inline-block;
-    background-color: var(--color2);
-    padding: 0.5em;
-    border-radius: 1em;
-    margin-left: 0.5em;
-}
-
-/************************/
-
-@media (min-width:50em) {
-    section {
-        padding: 2em 7em;
-    }
-    /************************/
-    #presentacion {
-        flex-direction: row;
-        background-color: var(--color2);
-    }
-    #presentacion>div {
-        margin-left: 2em;
-    }
-    /************************/
-    .educaExperiencia {
-        flex: 1 50%;
-        background-color: transparent !important;
-    }
-    /************************/
-    #recomendaciones {
-        background-color: var(--color2);
-    }
-    #hazRecomendacion {
-        flex: 100%;
-        margin-top: 1em;
-    }
-    /************************/
-    #repositorios {
-        background-color: transparent !important;
-    }
-    #repositorios>div {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+#container {
+    flex: 0 80%;
+    background-color: var(--color3);
+    min-height: 100vh;
+    box-shadow: 0 0 1em black;
 }

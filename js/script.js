@@ -1,7 +1,6 @@
 window.onload = function () {
     muestraEdad()
-    muestraComentarios()
-    muestraRepositorios()
+    //muestraRepositorios()
 }
 
 function muestraEdad() {
@@ -14,18 +13,6 @@ function muestraEdad() {
         edad--;
     }
     document.getElementById("edad").innerHTML = edad
-}
-
-function muestraComentarios() {
-    new Glider(document.querySelector('.glider'), {
-        slidesToShow: 1,
-        dots: '.dots',
-        draggable: true,
-        arrows: {
-            prev: '.glider-prev',
-            next: '.glider-next'
-        }
-    })
 }
 
 function muestraRepositorios() {
