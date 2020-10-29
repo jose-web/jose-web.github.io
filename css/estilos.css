@@ -64,10 +64,13 @@ body {
 }
 
 #repositorios span {
-    margin: 0.5em;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
     padding: 0.5em;
     background-image: linear-gradient(-40deg, var(--color2), var(--color1));
     border-radius: 1em;
+    display: inline-block;
+    color:var(--color3)
 }
 
 @media (min-width:50em) {
