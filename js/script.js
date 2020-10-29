@@ -1,6 +1,6 @@
 window.onload = function () {
     muestraEdad()
-    //muestraRepositorios()
+    muestraRepositorios()
 }
 
 function muestraEdad() {
@@ -33,11 +33,9 @@ function muestraRepositorios() {
                     repositorio += "</p>"
                     let topics = res[i].topics
                     if (topics.length != 0) {
-                        repositorio += "<p>"
                         for (let o = 0; o < topics.length; o++) {
                             repositorio += "<span>" + topics[o] + "</span>"
                         }
-                        repositorio += "</p>"
                         console.log(res[i].html_url)
                     }
 

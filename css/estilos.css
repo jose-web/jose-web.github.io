@@ -59,6 +59,17 @@ body {
     font-weight: bold;
 }
 
+#repositorios {
+    flex: 100%;
+}
+
+#repositorios span {
+    margin: 0.5em;
+    padding: 0.5em;
+    background-image: linear-gradient(-40deg, var(--color2), var(--color1));
+    border-radius: 1em;
+}
+
 @media (min-width:50em) {
     #container {
         flex-direction: row;
