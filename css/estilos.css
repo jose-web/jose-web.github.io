@@ -37,13 +37,8 @@ body {
     margin: 1em;
 }
 
-#descripcion>div>p:nth-child(2) {
-    color: var(--color4);
-    font-weight: normal;
-}
-
 .caja {
-    flex: 1 20%;
+    flex: 1 40%;
     background-color: var(--color3);
     margin: 1em;
     padding: 1em;
@@ -55,8 +50,12 @@ body {
     margin-top: 1em;
 }
 
-.caja>div>p:nth-child(2) {
-    color: var(--color1);
+.caja>div:nth-child(n+3) {
+    padding-top: 1em;
+    border-top: 0.01em solid var(--color4);
+}
+
+.caja .color {
     font-weight: bold;
 }
 
@@ -72,8 +71,5 @@ body {
     }
     #descripcion img {
         width: 10em;
-    }
-    .caja {
-        margin-bottom: auto;
     }
 }
