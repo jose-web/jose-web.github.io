@@ -1,6 +1,7 @@
 window.onload = function () {
     muestraEdad()
-    muestraRepositorios()
+    //muestraRepositorios()
+    fondo(["🎃", "🧟", "👻", "🕷", "🍬"])
 }
 
 function muestraEdad() {
@@ -42,4 +43,20 @@ function muestraRepositorios() {
                 }
             }
         });
+}
+
+function fondo($item) {
+    let isArray = Array.isArray($item)
+    for (let i = 0; i < 15; i++) {
+        let marginIzquierda = Math.trunc(Math.random() * 100)
+        let marginArriba = Math.trunc(Math.random() * 100)
+        let scale = Math.trunc(Math.random() * 3) + 1
+        let item = isArray ? $item[Math.trunc(Math.random() * $item.length)] : $item
+
+        document.getElementById("fondo").innerHTML += `<span style='
+        left:${marginIzquierda}%; 
+        top:${marginArriba}%; 
+        transform:scale(${scale});
+        '>${item}</span>`
+    }
 }

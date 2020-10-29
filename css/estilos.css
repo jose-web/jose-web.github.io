@@ -70,7 +70,20 @@ body {
     background-image: linear-gradient(-40deg, var(--color2), var(--color1));
     border-radius: 1em;
     display: inline-block;
-    color:var(--color3)
+    color: var(--color3)
+}
+
+#fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+#fondo span{
+    position: absolute;
 }
 
 @media (min-width:50em) {
