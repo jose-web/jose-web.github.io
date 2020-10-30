@@ -13,6 +13,10 @@
     --color4: rgb(34, 34, 34);
 }
 
+#halloween {
+    --color1: rgb(255 173 0);
+}
+
 body {
     background-image: linear-gradient(-40deg, var(--color1), var(--color2));
     display: flex;
@@ -82,7 +86,7 @@ body {
     z-index: -1;
 }
 
-#fondo span{
+#fondo span {
     position: absolute;
 }
 

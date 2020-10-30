@@ -1,7 +1,7 @@
 window.onload = function () {
+    aplicarTema()
     muestraEdad()
-    //muestraRepositorios()
-    fondo(["🎃", "🧟", "👻", "🕷", "🍬"])
+    muestraRepositorios()
 }
 
 function muestraEdad() {
@@ -45,7 +45,7 @@ function muestraRepositorios() {
         });
 }
 
-function fondo($item) {
+function fondo($item, $tema) {
     let isArray = Array.isArray($item)
     for (let i = 0; i < 15; i++) {
         let marginIzquierda = Math.trunc(Math.random() * 100)
@@ -59,4 +59,15 @@ function fondo($item) {
         transform:scale(${scale});
         '>${item}</span>`
     }
+
+    document.getElementsByTagName("body")[0].setAttribute("id", $tema);
+}
+
+function aplicarTema() {
+    let hoy = new Date()
+    let mes = hoy.getMonth()
+
+    if (mes == 9)
+        fondo(["🎃", "🧟", "👻", "🕷", "🍬"], "halloween")
+
 }
