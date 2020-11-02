@@ -24,7 +24,6 @@ body {
 }
 
 #container {
-    flex: 0 80%;
     display: flex;
     flex-direction: column;
 }
@@ -42,7 +41,6 @@ body {
 }
 
 .caja {
-    flex: 1 40%;
     background-color: var(--color3);
     margin: 1em;
     padding: 1em;
@@ -61,10 +59,6 @@ body {
 
 .caja .color {
     font-weight: bold;
-}
-
-#repositorios {
-    flex: 100%;
 }
 
 #repositorios span {
@@ -92,6 +86,7 @@ body {
 
 @media (min-width:50em) {
     #container {
+        flex: 0 80%;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -102,5 +97,11 @@ body {
     }
     #descripcion img {
         width: 10em;
+    }
+    .caja {
+        flex: 1 40%;
+    }
+    #repositorios {
+        flex: 100%;
     }
 }
