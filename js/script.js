@@ -69,5 +69,7 @@ function aplicarTema() {
 
     if (mes == 9)
         fondo(["🎃", "🧟", "👻", "🕷", "🍬"], "halloween")
+    else if (mes == 10 || mes == 11)
+        fondo(["🎅", "❄️", "⛄", "🎄", "🎁", "🍪"], "invierno")
 
 }

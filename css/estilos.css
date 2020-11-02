@@ -17,6 +17,13 @@
     --color1: rgb(255 173 0);
 }
 
+#invierno {
+    --color1: rgb(1 0 255);
+    --color2: rgb(0 243 241);
+    --color3: rgb(25 28 58 / 85%);
+    --color4: rgb(224 224 224);
+}
+
 body {
     background-image: linear-gradient(-40deg, var(--color1), var(--color2));
     display: flex;
@@ -68,7 +75,8 @@ body {
     background-image: linear-gradient(-40deg, var(--color2), var(--color1));
     border-radius: 1em;
     display: inline-block;
-    color: var(--color3)
+    color: var(--color3);
+    font-weight: bold;
 }
 
 #fondo {
