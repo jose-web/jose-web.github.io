@@ -65,11 +65,14 @@ function fondo($item, $tema) {
 
 function aplicarTema() {
     let hoy = new Date()
+    let dia = hoy.getDate()
     let mes = hoy.getMonth()
 
     if (mes == 9)
         fondo(["🎃", "🧟", "👻", "🕷", "🍬"], "halloween")
-    else if (mes == 10 || mes == 11)
+    else if (dia == 13 && mes == 11)
+        fondo(["🎁", "🎂", "🎈", "🥳"], "")
+    else if (mes == 11)
         fondo(["🎅", "❄️", "⛄", "🎄", "🎁", "🍪"], "invierno")
 
 }
