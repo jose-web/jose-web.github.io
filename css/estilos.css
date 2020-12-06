@@ -7,109 +7,80 @@
 }
 
 :root {
-    --color1: rgb(183, 0, 255);
+    --color1: rgb(177, 88, 236);
     --color2: rgb(243, 0, 0);
-    --color3: rgba(255, 255, 255, 0.849);
+    --color3: rgb(240, 240, 240);
     --color4: rgb(34, 34, 34);
 }
 
-#halloween {
-    --color1: rgb(255 173 0);
-}
-
-#invierno {
-    --color1: rgb(1 0 255);
-    --color2: rgb(0 243 241);
-    --color3: rgb(25 28 58 / 85%);
-    --color4: rgb(224 224 224);
-}
-
 body {
-    background-image: linear-gradient(-40deg, var(--color1), var(--color2));
-    display: flex;
-    justify-content: center;
-}
-
-#container {
-    display: flex;
-    flex-direction: column;
-}
-
-#descripcion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#descripcion img {
-    width: 15em;
-    height: auto;
-    margin: 1em;
-}
-
-.caja {
     background-color: var(--color3);
-    margin: 1em;
-    padding: 1em;
-    border-radius: 1em;
-    box-shadow: 0 0 1em black;
 }
 
-.caja>div {
-    margin-top: 1em;
+.color1 {
+    color: var(--color1)
 }
 
-.caja>div:nth-child(n+3) {
-    padding-top: 1em;
-    border-top: 0.01em solid var(--color4);
+#arriba {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
-.caja .color {
-    font-weight: bold;
+#arriba>img {
+    width: 7em;
+    height: auto;
 }
 
-#repositorios span {
-    margin-top: 0.5em;
-    margin-right: 0.5em;
-    padding: 0.5em;
-    background-image: linear-gradient(-40deg, var(--color2), var(--color1));
-    border-radius: 1em;
-    display: inline-block;
-    color: var(--color3);
-    font-weight: bold;
-}
-
-#fondo {
-    position: fixed;
+#menu {
+    position: sticky;
     top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
+    background-color: var(--color3);
+    border-bottom: 0.1em solid rgba(0, 0, 0, 0.1);
 }
 
-#fondo span {
+#menu>ul {
+    display: flex;
+}
+
+#menu>ul>li {
+    list-style: none;
+    transition: 0.5s;
+    position: relative
+}
+
+#menu>ul>li>a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.active:after {
+    content: "";
+    display: block;
+    height: 0.1em;
+    background-color: var(--color1);
     position: absolute;
+    top: 2.2em;
+    width: 90%;
+    left: 5%;
+    animation: animaMenuActivo linear 0.5s;
 }
 
-@media (min-width:50em) {
-    #container {
-        flex: 0 80%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+@keyframes animaMenuActivo {
+    0% {
+        left: 50%;
+        width: 0%;
     }
-    #descripcion {
-        flex-direction: row;
-        flex: 100%;
+    100% {
+        width: 90%;
+        left: 5%;
     }
-    #descripcion img {
-        width: 10em;
-    }
-    .caja {
-        flex: 1 40%;
-    }
-    #repositorios {
-        flex: 100%;
-    }
+}
+
+.pagina {
+    min-height: 100vh;
+    display: flex;
 }

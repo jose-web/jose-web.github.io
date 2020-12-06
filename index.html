@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Manifest -->
-    <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="img/logo.png">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <!-- Estilos -->
@@ -15,105 +13,41 @@
     <title>JOSE DE LOS SANTOS RAMOS</title>
     <!-- CDN Fuente Varela Round -->
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- CDN Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
-    <div id="container">
-        <div id="descripcion" class="caja">
-            <img src="https://www.gravatar.com/avatar/9d08418b5f4ec35334131f12339e5e6d.jpg?s=256"
-                alt="Imagen de perfil">
-            <div>
-                Hola, mi nombre es
-                <h1>JOSE DE LOS SANTOS RAMOS,</h1>
-                <p>🎂 Tengo <span id="edad"></span> años</p>
-                <p>🗺️ vivo en Málaga, España</p>
-                <p>👨🏽‍💻 Soy desarrollador de aplicaciones web</p>
-                <p>
-                    📋 Me considero una persona activa a la que le encanta el mundo de la programación web, adoro
-                    aprender nuevos lenguajes y siempre le pongo muchas ganas a lo que estoy haciendo, siempre dando
-                    lo mejor de mi.
-                </p>
-                <p>
-                    Gracias a los proyectos en grupo, he aprendido a trabajar en equipo y a ayudar a
-                    mis compañeros/as en todo lo posible, enseñandoles y también aprendiendo de ellos/as.
-                </p>
-            </div>
+    <div id="arriba" class="pagina">
+        <img src="https://www.gravatar.com/avatar/9d08418b5f4ec35334131f12339e5e6d.jpg?s=256" alt="Avatar">
+        <div>
+            <p>Hola,</p>
+            <p>me llamo <span class="color1">Jose de los santos</span></p>
+            <p>y soy programador web</p>
         </div>
-        <div class="caja">
-            <h2>Experiencia</h2>
-            <div>
-                <p>Desarrollador de aplicaciones web</p>
-                <p class="color">Mindiff</p>
-            </div>
-            <div>
-                <p>Técnico informático en prácticas</p>
-                <p class="color">3B Intermatic S.L.</p>
-            </div>
-        </div>
-        <div class="caja">
-            <h2>Educación</h2>
-            <div>
-                <p>Más de 30 diplomas</p>
-                <p class="color">OpenWebinars</p>
-            </div>
-            <div>
-                <p>Grado superior de Desarrollo de Aplicaciones Web</p>
-                <p class="color">IES Mar de alborán</p>
-            </div>
-            <div>
-                <p>Diseño web y comunity manager</p>
-                <p class="color">Academia Informática Tron</p>
-            </div>
-            <div>
-                <p>Curso de Wordpress y Joomla</p>
-                <p class="color">Ayuntamiento de málaga y centro de estudios ACEPMA</p>
-            </div>
-            <div>
-                <p>Grado medio de Sistemas Microinformáticos y Redes</p>
-                <p class="color">IES Salduba</p>
-            </div>
-        </div>
-        <div class="caja">
-            <h2>Recomendaciones en LinkedIn</h2>
-            <div class="recomendacion">
-                <p class="color">JUAN MORENO, Profesor en DAW</p>
-                José de los santos es un trabajador disciplinado e incansable.
-                Es una persona perfeccionista que le gusta que sus proyectos tengan muy buena calidad.
-                Se adapta muy bien al trabajo colaborativo y sus compañeros suelen apreciarle por lo buena persona
-                que es.
-                Recomiendo a cualquier empresa su contratación porque es un valor seguro.
-            </div>
-            <div class="recomendacion">
-                <p class="color">FEDERICO HUÉRCANO RUIZ, Profesor en DAW</p>
-                He sido profesor de José de los Santos, y lo que puedo decir de él es que ha sido un excelente
-                alumno, capaz
-                de enfrentarse a difíciles retos informáticos y encontrar la solución óptima. José es un valor
-                seguro para
-                formar parte de un equipo de trabajo, porque añade a su valor técnico su valía como persona y
-                compañero.
-            </div>
-            <div class="recomendacion">
-                <p class="color">JOSÉ RODRÍGUEZ FERNANDEZ, Compañero en DAW</p>
-                Excelente compañero, resuelto y eficiente. Siempre dispuesto a ayudar, aprender y desarrollarse como
-                profesional.
-                Cursamos 2 años juntos en el Módulo Superior de Desarrollo de Aplicaciones Web en el IES Mar de
-                Alborán(Estepona) durante los cuáles demostró ser un gran compañero e incluso a veces un gran
-                maestro.
-                Amplio conocimiento en HTML, CSS, PHP, JAVASCRIPT, JAVA, REACT, BOOTSTRAP, JQUERY, etc...
-
-                Sería un placer trabajar con él en el futuro! 👍👍
-            </div>
-            <div class="recomendacion">
-                <p class="color">RAFAEL CARRILLO BONILLA, Compañero en DAW</p>
-                Es un buen compañero y ayuda a los demás a la hora de trabajar, es amable y simpático.
-            </div>
-        </div>
-        <div class="caja" id="repositorios">
-            <h2>Repositorios</h2>
-        </div>
+        <i class="fas fa-angle-double-down"></i>
     </div>
-    <div id="fondo"></div>
+    <header id="menu">
+        <ul>
+            <li><a href="#presentacion">Presentación</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+        </ul>
+    </header>
+    <div id="presentacion" class="pagina">
+        Hola, me llamo Jose de los santos y soy programador web
+    </div>
+    <div id="experiencia" class="pagina">
+        Hola, me llamo Jose de los santos y soy programador web
+    </div>
+    <div id="proyectos" class="pagina">
+        Hola, me llamo Jose de los santos y soy programador web
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 

@@ -1,7 +1,8 @@
 window.onload = function () {
-    aplicarTema()
-    muestraEdad()
-    muestraRepositorios()
+    //muestraEdad()
+    animaMenu()
+    //muestraRepositorios()
+
 }
 
 function muestraEdad() {
@@ -45,34 +46,50 @@ function muestraRepositorios() {
         });
 }
 
-function fondo($item, $tema) {
-    let isArray = Array.isArray($item)
-    for (let i = 0; i < 15; i++) {
-        let marginIzquierda = Math.trunc(Math.random() * 100)
-        let marginArriba = Math.trunc(Math.random() * 100)
-        let scale = Math.trunc(Math.random() * 3) + 1
-        let item = isArray ? $item[Math.trunc(Math.random() * $item.length)] : $item
+function animaMenu() {
+    // Cache selectors
+    let lastId,
+        topMenu = $("#menu"),
+        topMenuHeight = topMenu.outerHeight(),
+        // All list items
+        menuItems = topMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = menuItems.map(function () {
+            let item = $($(this).attr("href"));
+            if (item.length) { return item; }
+        });
 
-        document.getElementById("fondo").innerHTML += `<span style='
-        left:${marginIzquierda}%; 
-        top:${marginArriba}%; 
-        transform:scale(${scale});
-        '>${item}</span>`
-    }
+    // Bind click handler to menu items
+    // so we can get a fancy scroll animation
+    menuItems.click(function (e) {
+        let href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 1000);
+        e.preventDefault();
+    });
 
-    document.getElementsByTagName("body")[0].setAttribute("id", $tema);
-}
+    // Bind to scroll
+    $(window).scroll(function () {
+        // Get container scroll position
+        let fromTop = $(this).scrollTop() + topMenuHeight;
 
-function aplicarTema() {
-    let hoy = new Date()
-    let dia = hoy.getDate()
-    let mes = hoy.getMonth()
+        // Get id of current scroll item
+        let cur = scrollItems.map(function () {
+            if ($(this).offset().top < fromTop)
+                return this;
+        });
+        // Get the id of the current element
+        cur = cur[cur.length - 1];
+        let id = cur && cur.length ? cur[0].id : "";
 
-    if (mes == 9)
-        fondo(["🎃", "🧟", "👻", "🕷", "🍬"], "halloween")
-    else if (dia == 13 && mes == 11)
-        fondo(["🎁", "🎂", "🎈", "🥳"], "")
-    else if (mes == 11)
-        fondo(["🎅", "❄️", "⛄", "🎄", "🎁", "🍪"], "invierno")
-
+        if (lastId !== id) {
+            lastId = id;
+            // Set/remove active class
+            menuItems
+                .parent().removeClass("active")
+                .end().filter("[href='#" + id + "']").parent().addClass("active");
+        }
+    });
 }
