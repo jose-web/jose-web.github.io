@@ -8,7 +8,7 @@
 
 :root {
     --color1: rgb(177, 88, 236);
-    --color2: rgb(243, 0, 0);
+    --color2: rgb(221, 221, 221);
     --color3: rgb(240, 240, 240);
     --color4: rgb(34, 34, 34);
 }
@@ -23,10 +23,7 @@ body {
 
 #arriba {
     font-size: 2em;
-    display: flex;
-    align-items: center;
     justify-content: space-evenly;
-    flex-direction: column;
 }
 
 #arriba>img {
@@ -39,6 +36,7 @@ body {
     top: 0;
     background-color: var(--color3);
     border-bottom: 0.1em solid rgba(0, 0, 0, 0.1);
+    z-index: 999;
 }
 
 #menu>ul {
@@ -83,4 +81,67 @@ body {
 .pagina {
     min-height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+h2 {
+    position: relative;
+    margin: 1em;
+}
+
+h2:before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 0.1em;
+    width: 110%;
+    background-color: var(--color1);
+    bottom: 0;
+    left: -5%;
+}
+
+#repositorios {
+    width: 100%;
+}
+
+#repositorios>div {
+    margin-bottom: 1.5em;
+    background-color: var(--color2);
+    width: 100%;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1em var(--color2);
+    border: 0.1em solid gray
+}
+
+#repositorios>div>div {
+    display: flex;
+}
+
+#repositorios a {
+    padding: 1em;
+    border-left: 0.1em solid gray
+}
+
+.nombreRepositorio {
+    padding: 1em;
+    margin-right: auto;
+}
+
+@media (min-width: 600px) {
+    #arriba {
+        flex-direction: row !important;
+        position: relative;
+    }
+    #arriba>i {
+        position: absolute;
+        bottom: 2em;
+        width: 100%;
+        text-align: center;
+    }
+    .pagina {
+        padding: 1em 20%;
+    }
 }

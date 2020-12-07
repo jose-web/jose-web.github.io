@@ -1,7 +1,7 @@
 window.onload = function () {
-    //muestraEdad()
+    muestraEdad()
     animaMenu()
-    //muestraRepositorios()
+    muestraRepositorios()
 
 }
 
@@ -29,15 +29,20 @@ function muestraRepositorios() {
             for (let i = 0; i < res.length; i++) {
                 let repositoriosOcultos = ["jose-web.github.io", "jose-web"]
                 if (!repositoriosOcultos.includes(res[i].name)) {
-                    let repositorio = "<div><p>"
-                    repositorio += res[i].name
-                    repositorio += ' (Ver en <a title="Ver en GitHub" href="' + res[i].html_url + '" target="_blank">Github</a>'
-                    repositorio += res[i].homepage == "" ? "" : ' o en la <a title="Ver la web" href="' + res[i].homepage + '" target="_blank">Web</a>'
-                    repositorio += ")</p>"
-                    let topics = res[i].topics
-                    if (topics.length != 0)
-                        for (let o = 0; o < topics.length; o++)
-                            repositorio += "<span>" + topics[o] + "</span>"
+                    let repositorio = "<div><div>"
+                    repositorio += '<span class="nombreRepositorio">' + res[i].name + '</span>'
+                    repositorio += '<a title="Ver en GitHub" href="' + res[i].html_url + '" target="_blank"><i class="fab fa-github"></i></a>'
+                    repositorio += res[i].homepage ? "" : '<a title="Ver la web" href="' + res[i].homepage + '" target="_blank"><i class="fas fa-external-link-alt"></i></a>'
+                    repositorio += "</div>"
+
+                    // COMENTADO PARA REDISEÑAR UN ESTILO DESPUÉS
+
+                    // let topics = res[i].topics
+                    // if (topics.length != 0) {
+                    //     repositorio += " Etiquetas: "
+                    //     for (let o = 0; o < topics.length; o++)
+                    //         repositorio += "<span>" + (o == topics.length - 1 ? " y " : o != 0 ? ", " : "") + topics[o] + "</span>"
+                    // }
 
                     repositorio += "</div>"
                     this.document.getElementById("repositorios").innerHTML += repositorio
@@ -63,7 +68,7 @@ function animaMenu() {
     // so we can get a fancy scroll animation
     menuItems.click(function (e) {
         let href = $(this).attr("href"),
-            offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight;
+            offsetTop = href === "#" ? 0 : $(href).offset().top;
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, 1000);
