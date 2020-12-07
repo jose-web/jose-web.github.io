@@ -31,8 +31,8 @@ function muestraRepositorios() {
                 if (!repositoriosOcultos.includes(res[i].name)) {
                     let repositorio = "<div><div>"
                     repositorio += '<span class="nombreRepositorio">' + res[i].name + '</span>'
+                    repositorio += res[i].homepage ? '<a title="Ver la web" href="' + res[i].homepage + '" target="_blank"><i class="fas fa-external-link-alt"></i></a>' : ""
                     repositorio += '<a title="Ver en GitHub" href="' + res[i].html_url + '" target="_blank"><i class="fab fa-github"></i></a>'
-                    repositorio += res[i].homepage ? "" : '<a title="Ver la web" href="' + res[i].homepage + '" target="_blank"><i class="fas fa-external-link-alt"></i></a>'
                     repositorio += "</div>"
 
                     // COMENTADO PARA REDISEÑAR UN ESTILO DESPUÉS
