@@ -54,7 +54,7 @@ function muestraRepositorios() {
 function animaMenu() {
     // Cache selectors
     let lastId,
-        topMenu = $("#menu"),
+        topMenu = $("#menu, #arriba"),
         topMenuHeight = topMenu.outerHeight(),
         // All list items
         menuItems = topMenu.find("a"),
