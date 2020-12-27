@@ -24,11 +24,16 @@ body {
 #arriba {
     font-size: 2em;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #arriba>img {
     width: 7em;
     height: auto;
+}
+
+#textoArriba {
+    padding: 0.5em;
 }
 
 #menu {
@@ -55,7 +60,7 @@ body {
     text-decoration: none;
 }
 
-.active:after {
+#menu .active:after {
     content: "";
     display: block;
     height: 0.1em;
@@ -87,6 +92,14 @@ body {
     padding: 1em;
 }
 
+.pagina:nth-child(2n+1) {
+    background-color: var(--color2);
+}
+
+.pagina:nth-child(1) {
+    background-color: initial !important;
+}
+
 h2 {
     position: relative;
     margin: 1em;
@@ -102,6 +115,29 @@ h2:before {
     bottom: 0;
     left: -5%;
 }
+
+/* ################## PRESENTACIÓN ##################*/
+
+#presentacion>div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+fieldset {
+    flex: 1;
+    padding: 1em;
+    margin: 1em;
+    border: 0.2em solid var(--color1)
+}
+
+legend {
+    padding: 0 0.5em;
+    color: var(--color1);
+    font-weight: bold;
+}
+
+/* ################## REPOSITORIOS ##################*/
 
 #repositorios {
     width: 100%;
@@ -130,9 +166,11 @@ h2:before {
     margin-right: auto;
 }
 
-#contacto>div{
-    width:100%;
-    display:flex;
+/* ################## CONTACTO ##################*/
+
+#contacto>div {
+    width: 100%;
+    display: flex;
     justify-content: space-around;
     font-size: 3em;
 }
@@ -142,7 +180,7 @@ h2:before {
         flex-direction: row !important;
         position: relative;
     }
-    #arriba>i {
+    #arriba>#irAbajo {
         position: absolute;
         bottom: 2em;
         width: 100%;
@@ -150,5 +188,8 @@ h2:before {
     }
     .pagina {
         padding: 1em 20%;
+    }
+    #textoArriba {
+        min-width: max-content;
     }
 }

@@ -22,12 +22,12 @@
 <body>
     <div id="arriba" class="pagina">
         <img src="https://www.gravatar.com/avatar/9d08418b5f4ec35334131f12339e5e6d.jpg?s=256" alt="Avatar">
-        <div>
+        <div id="textoArriba">
             <p>Hola,</p>
             <p>me llamo <span class="color1">Jose de los santos</span></p>
             <p>y soy programador web</p>
         </div>
-        <a href="#presentacion"><i class="fas fa-angle-double-down"></i></a>
+        <a id="irAbajo" href="#presentacion"><i class="fas fa-angle-double-down"></i></a>
     </div>
     <header id="menu">
         <ul>
@@ -38,13 +38,30 @@
     </header>
     <div id="presentacion" class="pagina">
         <h2>PRESENTACIÓN</h2>
-        <p>Soy de Málaga, tengo <span id="edad"></span> años, me considero una persona activa a la que le encanta el
-            mundo de la
-            programación web, adoro aprender nuevos
-            lenguajes y siempre le pongo muchas ganas a lo que estoy haciendo, siempre dando lo mejor de mi.
+        <div>
+            <fieldset>
+                <legend>Personal</legend>
+                Soy de Málaga, tengo <span id="edad"></span> años, me considero una persona activa a la que le encanta
+                el
+                mundo de la programación web.
+            </fieldset>
 
-            Gracias a los proyectos en grupo, he aprendido a trabajar en equipo y a ayudar a mis compañeros/as en todo
-            lo posible, enseñandoles y también aprendiendo de ellos/as.</p>
+            <fieldset>
+                <legend>Sobre mi</legend>
+                Adoro aprender nuevos lenguajes y siempre le pongo muchas ganas a lo que estoy haciendo, siempre dando
+                lo
+                mejor de mi.
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Trabajo en equipo</legend>
+                Gracias a los proyectos en grupo, he aprendido a trabajar en equipo y a ayudar a mis compañeros/as en
+                todo
+                lo posible, enseñandoles y también aprendiendo de ellos.
+            </fieldset>
+        </div>
+
     </div>
     <div id="proyectos" class="pagina">
         <h2>PROYECTOS</h2>
