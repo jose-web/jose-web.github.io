@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom"
+import './comunes/estilosComunes.scss'
+import Inicio from "./paginas/inicio"
+
+// import * as serviceWorker from './serviceWorker';
+
+export default class Router extends React.Component {
+
+  render() {
+    return <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Inicio} />
+        <Redirect from="*" to="/" />
+      </Switch>
+    </BrowserRouter>
+  }
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <Router />, document.getElementById('root')
+)
+// serviceWorker.register()
