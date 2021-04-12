@@ -31,11 +31,7 @@ export default class Inicio extends React.Component {
                 <main id="inicio" >
                     <div>
                         <img src="https://www.gravatar.com/avatar/9d08418b5f4ec35334131f12339e5e6d.jpg?s=256" alt="Avatar" />
-                        <h1>
-                            Hola,
-                            me llamo Jose de los santos
-                            y soy programador web
-                        </h1>
+                        <h1>Hola, me llamo Jose de los santos y soy programador web</h1>
                     </div>
                     <div className="presentacion">
                         <p className="titulo">Personal</p>

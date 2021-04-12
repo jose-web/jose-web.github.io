@@ -16,10 +16,10 @@ export default class Login extends React.Component {
             <div id="menuPrincipal" >
                 <Link id="miNombre" to="/" title="JOSE DE LOS SANTOS RAMOS">JOSE-WEB</Link>
                 <ul>
-                    <li className={this.state.select("inicio")}><Link to="/" ><i class="fas fa-home"></i> Inicio</Link></li>
-                    <li className={this.state.select("experiencia")} ><Link to="/experiencia" ><i class="fas fa-briefcase"></i> Experiencia</Link></li>
-                    <li className={this.state.select("educacion")} ><Link to="/educacion" >‍<i class="fas fa-graduation-cap"></i> Educación</Link></li>
-                    <li className={this.state.select("proyectos")} ><Link to="/proyectos" ><i class="fas fa-file-code"></i> Proyectos</Link></li>
+                    <li className={this.state.select("inicio")}><Link to="/" ><i className="fas fa-home"></i> Inicio</Link></li>
+                    <li className={this.state.select("experiencia")} ><Link to="/experiencia" ><i className="fas fa-briefcase"></i> Experiencia</Link></li>
+                    <li className={this.state.select("educacion")} ><Link to="/educacion" >‍<i className="fas fa-graduation-cap"></i> Educación</Link></li>
+                    <li className={this.state.select("proyectos")} ><Link to="/proyectos" ><i className="fas fa-file-code"></i> Proyectos</Link></li>
                     {/* 
                     <li>Administración
                         <ul>
@@ -31,9 +31,9 @@ export default class Login extends React.Component {
                     */}
                 </ul>
                 <div id="contacto">
-                    <a href="https://www.linkedin.com/in/jose-web" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/jose-web" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
 
-                    <a href="mailto:delossantosramosjose@gmail.com" title="delossantosramosjose@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="mailto:delossantosramosjose@gmail.com" title="delossantosramosjose@gmail.com"><i className="fas fa-envelope"></i></a>
                 </div>
             </div>
         )
