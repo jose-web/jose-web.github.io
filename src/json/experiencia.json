@@ -1,0 +1,32 @@
+{
+    "experiencia": [
+        {
+            "empresa": "Mindiff",
+            "cargos": [
+                {
+                    "cargo": "Desarrollador front-end",
+                    "contrato": "Jornada parcial",
+                    "duracion":"dic 2020 - actualidad · 5 meses",
+                    "descripcion": "Trabajando con Electron y Vue en el lobby del juego \"The Immortal Mystics\""
+                },
+                {
+                    "cargo": "Desarrollador front-end",
+                    "contrato": "Contrato en prácticas",
+                    "duracion":"sept 2020 - nov 2020 · 3 meses",
+                    "descripcion": "Usé Electron y React para trabajar en el lobby de \"The Immortal Mystics\""
+                }
+            ]
+        },
+        {
+            "empresa": "3B Intermatic",
+            "cargos": [
+                {
+                    "cargo": "Técnico informático",
+                    "contrato": "Contrato en prácticas",
+                    "duracion":"sept 2017 - nov 2017 · 3 meses",
+                    "descripcion": "Instalación de sistemas operativos, reparación de ordenadores y atención al cliente"
+                }
+            ]
+        }
+    ]
+}
