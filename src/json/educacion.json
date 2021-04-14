@@ -1,0 +1,29 @@
+{
+    "educacion": [
+        {
+            "nombre": "Universidad Internacional Menéndez Pelayo",
+            "estudio": "Curso de inmersion lingüistica inglesa",
+            "descripcion": "Estuve desde el 14 hasta el 18 de diciembre en una incursión lingüistica inglesa en Cartagena, Murcia"
+        },
+        {
+            "nombre": "IES Mar de alborán",
+            "estudio": "Grado Superior de Desarrollo de aplicaciones web",
+            "descripcion": "Aprendí: HTML 5, CSS 3, JQUERY, JAVASCRIPT, PHP, JAVA, JSON, GIT, REACT"
+        },
+        {
+            "nombre": "Academia Informática Tron",
+            "estudio": "Diseño web y community manager",
+            "descripcion": "Aprendí a: Planificar un plan de e-marketing para una empresa, desde los objetivos, las herramientas a utilizar y su implementación, Aplicar las herramientas que proporciona el entorno web 2.0 en el desarrollo de estrategias de marketing y comunicación persuasiva en la web colaborativa, Elegir apropiadamente las herramientas de comunicación y promoción on-line más adecuadas para cada situación, Comprender y valorar los aspectos clave en el diseño y la ejecución de una tienda online para su posterior desarrollo, desde la captación de usuarios hasta la venta y la posterior fidelización, Comprender y valorar los aspectos clave de la web social y asumir los fundamentos del social media para determinar una estrategia de social media, Crear un plan estratégico en medios sociales en función de unos objetivos y diseñar y aplicar un plan de acción que logre una correcta ejecución del plan estratégico"
+        },
+        {
+            "nombre": "Ayuntamiento de Málaga y centro de estudios ACEPMA",
+            "estudio": "Curso de Diseño Web",
+            "descripcion": "Aprendí a: Instalar y mantener Joomla, Instalar y mantener Wordpress"
+        },
+        {
+            "nombre": "IES Salduba",
+            "estudio": "Grado medio de Sistemas micro informáticos y redes",
+            "descripcion": "Aprendí a:  Instalar y mantener servicios de redes, Instalador-reparador de equipos informáticos, Técnico de soporte informático, Técnico de redes de datos, Reparador de periféricos de sistemas microinformáticos, Comercial de microinformática, Operador de sistemas, Microsoft office a nivel usuario avanzado."
+        }
+    ]
+}
