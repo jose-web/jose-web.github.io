@@ -5,13 +5,6 @@ import experiencia from '../../json/experiencia.json'
 
 export default class Experiencia extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        };
-    }
-
     verExperiencia() {
         let arrayEmpresas = []
         for (const empresa of experiencia.experiencia) {
@@ -27,7 +20,7 @@ export default class Experiencia extends React.Component {
             }
 
             arrayEmpresas.push(<div className="empresa" key={arrayEmpresas.length}>
-                <div className="nombre">{empresa.empresa}</div>
+                <div className="nombreEmpresa">{empresa.empresa}</div>
                 <div className="cargos">
                     {cargos}
                 </div>
@@ -44,6 +37,7 @@ export default class Experiencia extends React.Component {
             <>
                 <Menu pagina="experiencia" />
                 <main id="experiencia" >
+                    <h1>Mi experiencia trabajando</h1>
                     {this.verExperiencia()}
                 </main>
             </>
