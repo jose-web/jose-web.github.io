@@ -9,24 +9,29 @@
         margin: 1em;
         background-color: var(--color3);
         align-items: center;
+        width: 90%;
 
         .nombreEmpresa {
             padding: 1em;
             font-weight: bold;
         }
 
-        .cargo {
-            border-bottom: 0.2em solid var(--color1);
-            padding: 1em;
+        .cargos {
+            width: 100%;
 
-            &:nth-last-child(1) {
-                border: none;
-            }
+            .cargo {
+                border-bottom: 0.2em solid var(--color1);
+                padding: 1em;
 
-            .nombre {
-                border-bottom: 0.1em dotted var(--color4);
-                margin-bottom: 0.5em;
-                padding-bottom: 0.5em;
+                &:nth-last-child(1) {
+                    border: none;
+                }
+
+                .nombre {
+                    border-bottom: 0.1em dotted var(--color4);
+                    margin-bottom: 0.5em;
+                    padding-bottom: 0.5em;
+                }
             }
         }
     }

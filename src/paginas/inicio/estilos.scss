@@ -1,6 +1,4 @@
 #inicio {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 
     h1 {
@@ -25,19 +23,31 @@
             position: relative;
             padding-left: 0.5em;
             align-self: flex-start;
-            width: 20em;
+            max-width: 20em;
 
             &:before {
                 content: "";
                 display: block;
                 position: absolute;
-                background-image: linear-gradient(130deg, var(--color4) 60%, transparent 40%);
+                background-image: linear-gradient(125deg, var(--color4) 60%, transparent 40%);
                 width: 100%;
                 height: 100%;
                 top: 0;
                 left: 0;
                 z-index: -1;
             }
+        }
+    }
+}
+
+@media (min-width: 55em) {
+    #inicio {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        h1 {
+            flex: 0 40%;
         }
     }
 }

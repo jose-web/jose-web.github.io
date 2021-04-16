@@ -20,6 +20,8 @@ body {
 main {
     padding: 1em;
     animation: inicio 0.5s;
+    display: flex;
+    flex-direction: column;
 
     @keyframes inicio {
         0% {
