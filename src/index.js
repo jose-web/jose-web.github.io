@@ -5,6 +5,7 @@ import './comunes/estilosComunes.scss'
 import Inicio from "./paginas/inicio"
 import Experiencia from "./paginas/experiencia"
 import Educacion from "./paginas/educacion"
+import Proyectos from "./paginas/proyectos"
 
 // import * as serviceWorker from './serviceWorker';
 
@@ -16,6 +17,7 @@ export default class Router extends React.Component {
         <Route exact path="/" component={Inicio} />
         <Route exact path="/experiencia" component={Experiencia} />
         <Route exact path="/educacion" component={Educacion} />
+        <Route exact path="/proyectos" component={Proyectos} />
         <Redirect from="*" to="/" />
       </Switch>
     </BrowserRouter>
