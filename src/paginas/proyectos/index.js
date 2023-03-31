@@ -6,8 +6,19 @@ export default class Proyectos extends React.Component {
 
     constructor(props) {
         super(props);
+
+        let repositorios = []
+        for (let i = 100; i > 0; i=i-5) { // 20 repeticiones
+            let clases = "repositorio cargando cargando-" + i
+            repositorios.push(<div className={clases} >
+                <span className="nombreRepositorio">z404a03c8ba93</span>
+                <a><i className="fas fa-external-link-alt"></i></a>
+                <a><i className="fab fa-github"></i></a>
+            </div>)
+        }
+
         this.state = {
-            repositorios: []
+            repositorios
         };
     }
 
@@ -35,7 +46,6 @@ export default class Proyectos extends React.Component {
                 }
                 this.setState({ repositorios })
             })
-
 
     }
 
