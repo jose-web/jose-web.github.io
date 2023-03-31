@@ -29,20 +29,27 @@ export default class Inicio extends React.Component {
             <>
                 <Menu pagina="inicio" />
                 <main id="inicio" >
-                <img src="https://www.gravatar.com/avatar/9d08418b5f4ec35334131f12339e5e6d.jpg?s=256" alt="Avatar" />
+                    
+                    <div id="cabecera">
+                        <img src="https://www.gravatar.com/avatar/9d08418b5f4ec35334131f12339e5e6d.jpg?s=256" alt="Avatar" />
                         <h1>Hola, me llamo Jose de los santos y soy programador web</h1>
+                    </div>
+
                     <div className="presentacion">
                         <p className="titulo">Personal</p>
                         <p>{inicio.presentacion.replace("$edad", this.state.edad)}</p>
                     </div>
+
                     <div className="presentacion">
                         <p className="titulo">Sobre mi</p>
                         <p>{inicio.sobreMi}</p>
                     </div>
+                    
                     <div className="presentacion">
                         <p className="titulo">Trabajo en equipo</p>
                         <p>{inicio.equipo}</p>
                     </div>
+
                 </main>
             </>
         )

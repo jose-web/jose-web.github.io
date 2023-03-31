@@ -12,6 +12,11 @@
         margin-top: 1em;
     }
 
+    #cabecera{
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .presentacion {
         border: 0.1em solid var(--color4);
         max-width: 50em;
@@ -42,9 +47,9 @@
 
 @media (min-width: 55em) {
     #inicio {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        #cabecera{
+            flex-direction: row;
+        }
 
         h1 {
             flex: 0 40%;
