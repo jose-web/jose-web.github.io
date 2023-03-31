@@ -36,7 +36,6 @@ main {
 }
 
 .cargando {
-    filter: blur(0.2rem);
     position:relative;
     overflow: hidden;
 
@@ -54,7 +53,7 @@ main {
     
     @for $i from 0 through 100 {
         &-#{$i} {
-            opacity: $i/100
+            opacity: calc($i/100)
         }
     }
 }
